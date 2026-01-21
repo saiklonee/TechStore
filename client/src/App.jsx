@@ -1,10 +1,6 @@
-
-
 const App = () => {
   return (
-    <div>
-      sdlkf
-    </div>
+    <div>App</div>
   )
 }
 
