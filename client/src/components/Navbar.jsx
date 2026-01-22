@@ -76,7 +76,7 @@ const Navbar = () => {
           <NavLink to="/products" className="hover:text-primary transition">
             All Products
           </NavLink>
-          <NavLink to="/" className="hover:text-primary transition">
+          <NavLink to="/contact" className="hover:text-primary transition">
             Contact
           </NavLink>
 
@@ -172,7 +172,7 @@ const Navbar = () => {
           <NavLink to="/products" onClick={() => setOpen(false)}>
             All Products
           </NavLink>
-          <NavLink to="/" onClick={() => setOpen(false)}>
+          <NavLink to="/contact" onClick={() => setOpen(false)}>
             Contact
           </NavLink>
           {user && (
