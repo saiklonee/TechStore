@@ -11,8 +11,7 @@ const Footer = () => {
             alt="dummyLogoColored"
           />
           <p className="max-w-[410px] mt-6">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum unde
-            quaerat eveniet cumque accusamus atque qui error quo enim fugiat?
+            Footer
           </p>
         </div>
         <div className="flex flex-wrap justify-between w-full md:w-[45%] gap-5">
