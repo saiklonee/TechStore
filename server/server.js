@@ -22,7 +22,7 @@ await connectCloudinary();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://techstore-frontend-pi.vercel.app",
+  "https://techmart-client-project.vercel.app"
 ];
 
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);

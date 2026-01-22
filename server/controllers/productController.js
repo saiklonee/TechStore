@@ -10,6 +10,7 @@ export const addProduct = async (req, res) => {
     let imgagesUrl = await Promise.all(
       images.map(async (item) => {
         let result = await cloudinary.uploader.upload(item.path, {
+          asset_folder:"techmart",
           resource_type: "image",
         });
 
