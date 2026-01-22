@@ -1,4 +1,4 @@
-import { assets, footerLinks } from "../assets/assets";
+import { footerLinks } from "../assets/assets";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
           <img
             className="w-34 md:w-32"
-            src={assets.logo}
+            src="./storetypo.svg"
             alt="dummyLogoColored"
           />
           <p className="max-w-[410px] mt-6">

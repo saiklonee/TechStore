@@ -62,7 +62,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/">
           <img
-            src={assets.logo}
+            src="/storetypo.svg"
             alt="logo"
             className="cursor-pointer w-34 md:w-38"
           />
