@@ -70,8 +70,8 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10">
-          <NavLink to="/" className="hover:text-primary transition">
-            Home
+          <NavLink to="/seller" className="hover:text-primary transition">
+            Seller
           </NavLink>
           <NavLink to="/products" className="hover:text-primary transition">
             All Products
