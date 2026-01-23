@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useAppContext } from "../context/AppContext";
 
 const ProductCard = ({ product }) => {

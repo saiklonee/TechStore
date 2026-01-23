@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ShoppingCart } from "lucide-react";
 import { assets } from "../assets/assets";
 import { useAppContext } from "../context/AppContext";
