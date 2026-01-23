@@ -31,7 +31,7 @@ const App = () => {
             {showUserLogin ? <Login /> : null}
             <Toaster />
             <div
-                className={`${isSellerPath ? " " : "px-4 md:px-4 lg:px-4 xl:px-4"}`}
+                className={`${isSellerPath ? "w-full h-screen overflow-hidden " : "px-4 md:px-4 lg:px-4 xl:px-4"}`}
             >
                 <Routes>
                     <Route path="/" element={<Home />} />
