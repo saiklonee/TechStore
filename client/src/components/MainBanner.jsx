@@ -7,10 +7,10 @@ import { useAppContext } from "../context/AppContext";
 export default function MainBanner() {
   const { navigate } = useAppContext();
   return (
-    <section className="relative w-full min-h-screen bg-gradient-to-br from-blue-100 to-white overflow-hidden flex items-center justify-center p-6">
+    <section className="relative w-full h-[85vh] overflow-hidden flex items-center justify-center p-6">
       <div className="absolute inset-0 rounded-xl overflow-hidden">
         <img
-          src={assets.home_banner}
+          src={assets.home_banner_two}
           alt="Tech store background"
           className="w-full h-full object-cover"
         />
@@ -51,15 +51,6 @@ export default function MainBanner() {
           </button>
         </motion.div>
       </div>
-
-      <motion.img
-        src={assets.cpu_image}
-        alt="Gadget showcase"
-        className="hidden md:block absolute bottom-0 right-0 w-64 rounded-tl-2xl shadow-2xl"
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.9, duration: 0.8 }}
-      />
     </section>
   );
 }

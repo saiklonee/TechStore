@@ -30,10 +30,12 @@ import smartwatch_image from "./smartwatch.png";
 import gamingchair_image from "./gamingchair.png";
 import keyboard_image from "./keyboard.png";
 import home_banner from "./graduation.jpeg";
+import home_banner_two from "./homebannertwo.jpg";
 
 export const assets = {
   logo,
   home_banner,
+  home_banner_two,
   headphone_image,
   smartwatch_image,
   gamingchair_image,
