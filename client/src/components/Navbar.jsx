@@ -126,6 +126,9 @@ const Navbar = () => {
                 <ul className="absolute top-12 right-0 bg-white border rounded-md shadow-md py-2 w-40 text-sm z-50">
                   <li className="px-4 py-2 hover:bg-gray-100">{user.name}</li>
                   <li className="px-4 py-2 hover:bg-gray-100">
+                    <Link to="/profile" onClick={() => setProfileOpen(false)}>profile</Link>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100">
                     <Link to="/my-orders" onClick={() => setProfileOpen(false)}>
                       My Orders
                     </Link>
