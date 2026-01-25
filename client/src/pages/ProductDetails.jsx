@@ -59,8 +59,8 @@ const ProductDetails = () => {
                                 key={index}
                                 onClick={() => setThumbnail(image)}
                                 className={`shrink-0 w-20 h-20 border rounded-lg overflow-hidden transition-all cursor-pointer ${thumbnail === image
-                                        ? "border-2 border-primary"
-                                        : "border-gray-200"
+                                    ? "border-2 border-primary"
+                                    : "border-gray-200"
                                     }`}
                             >
                                 <img
