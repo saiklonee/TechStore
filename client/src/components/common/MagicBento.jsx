@@ -165,7 +165,7 @@ const cardData = [
         title: "Secure Checkout",
         description: "Stripe payments + COD supported for smooth purchases.",
         icon: <IconShield className="w-5 h-5" />,
-        image: "/bento/secure.png", // optional
+        image: "/bento/secure.jpg", // optional
     },
     {
         color: "#060010",
@@ -173,7 +173,7 @@ const cardData = [
         title: "Genuine Products",
         description: "Trusted brands, verified listings, and warranty support.",
         icon: <IconBolt className="w-5 h-5" />,
-        image: "/bento/warranty.png", // optional
+        image: "/bento/warranty.jpg", // optional
     },
     {
         color: "#060010",
@@ -789,23 +789,23 @@ const MagicBento = ({
                                 <>
                                     {/* Soft overlay image on right */}
                                     {card.image ? (
-                                        <div className="absolute right-0 top-0 h-full w-[55%] pointer-events-none z-[0]">
+                                        <div className="absolute inset-0 size-full left-0 top-0 h-full w-full pointer-events-none z-0">
                                             <img
                                                 src={card.image}
                                                 alt=""
-                                                className="h-full w-full object-cover opacity-[0.18] translate-x-4 scale-[1.05]"
+                                                className="h-full w-full object-cover opacity-[0.40] scale-[1.05]"
                                                 loading="lazy"
                                             />
-                                            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#060010]/70 to-[#060010]" />
+
                                         </div>
                                     ) : (
-                                        <div className="absolute inset-0 pointer-events-none z-[0]">
+                                        <div className="absolute inset-0 pointer-events-none z-0">
                                             <div className="absolute -right-24 -top-24 w-64 h-64 rounded-full bg-[rgba(59,130,246,0.15)] blur-2xl" />
                                             <div className="absolute -left-20 -bottom-20 w-72 h-72 rounded-full bg-[rgba(99,102,241,0.10)] blur-2xl" />
                                         </div>
                                     )}
 
-                                    <div className="relative z-[2] flex items-start justify-between gap-3">
+                                    <div className="relative z-2 flex items-start justify-between gap-3">
                                         <span className="text-[13px] font-medium text-white/80">
                                             {card.label}
                                         </span>
