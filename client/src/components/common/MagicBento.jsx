@@ -750,7 +750,7 @@ const MagicBento = ({
 
             <div className="w-full px-4 sm:px-6 lg:px-8">
                 {/* Heading */}
-                <div className="max-w-5xl mx-auto mb-4 sm:mb-6">
+                <div className="mx-auto mb-4 sm:mb-6">
                     <h2 className="text-[22px] sm:text-[28px] font-semibold text-gray-900">
                         {heading}
                     </h2>
@@ -770,7 +770,7 @@ const MagicBento = ({
                 )}
 
                 <BentoCardGrid gridRef={gridRef}>
-                    <div className="card-responsive w-full grid gap-2 max-w-5xl mx-auto">
+                    <div className="card-responsive w-full grid gap-2 mx-auto">
                         {data.map((card, index) => {
                             const baseClassName = `card flex flex-col justify-between relative aspect-[4/3] min-h-[200px] w-full max-w-full p-5 rounded-[20px] border border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 ${enableBorderGlow ? "card--border-glow" : ""
                                 }`;
