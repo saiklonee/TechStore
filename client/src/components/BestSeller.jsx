@@ -30,7 +30,7 @@ const BestSeller = () => {
               className="transition-opacity duration-500 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <ProductCard product={product} />
+              <ProductCard isBestSeller product={product} />
             </div>
           ))
         ) : (
