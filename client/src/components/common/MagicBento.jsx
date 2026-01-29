@@ -793,7 +793,7 @@ const MagicBento = ({
                                             <img
                                                 src={card.image}
                                                 alt=""
-                                                className="h-full w-full object-cover opacity-[0.40] scale-[1.05]"
+                                                className="h-full w-full object-cover opacity-[0.55] scale-[1.05]"
                                                 loading="lazy"
                                             />
 
