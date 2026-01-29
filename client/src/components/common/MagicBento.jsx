@@ -157,7 +157,7 @@ const cardData = [
         title: "Fast Shipping",
         description: "Get your gadgets delivered quickly with real-time tracking.",
         icon: <IconTruck className="w-5 h-5" />,
-        image: "/bento/shipping.png", // optional
+        image: "/bento/shipping.jpg", // optional
     },
     {
         color: "#060010",
