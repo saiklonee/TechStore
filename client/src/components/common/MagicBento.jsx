@@ -181,7 +181,7 @@ const cardData = [
         title: "Quick Help",
         description: "Need assistance? Get fast support for orders & returns.",
         icon: <IconHeadset className="w-5 h-5" />,
-        image: "/bento/support.png", // optional
+        image: "/bento/support.avif", // optional
     },
     {
         color: "#060010",
@@ -189,7 +189,7 @@ const cardData = [
         title: "Best Deals",
         description: "Limited-time discounts, bundles, and value pricing.",
         icon: <IconTag className="w-5 h-5" />,
-        image: "/bento/deals.png", // optional
+        image: "/bento/deals.jpg", // optional
     },
     {
         color: "#060010",
@@ -197,7 +197,7 @@ const cardData = [
         title: "Easy Returns",
         description: "Simple return process with quick refunds when eligible.",
         icon: <IconRefresh className="w-5 h-5" />,
-        image: "/bento/returns.png", // optional
+        image: "/bento/returns.avif", // optional
     },
 ];
 
