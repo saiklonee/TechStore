@@ -3,7 +3,7 @@ import MagicBento from './common/MagicBento'
 
 const SecondaryBanner = () => {
     return (
-        <section className='mt-24 px-4 md:px-8'>
+        <section className='w-full mt-24'>
             <MagicBento />
         </section>
     )
