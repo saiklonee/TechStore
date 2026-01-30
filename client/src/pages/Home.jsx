@@ -4,6 +4,7 @@ import BestSeller from "../components/BestSeller";
 import NewsLetter from "../components/NewsLetter";
 import SecondaryBanner from "../components/SecondaryBanner";
 import NewArrivals from "../components/NewArrivals";
+import FeaturedBrands from "../components/FeaturedBrands";
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <MainBanner />
             <Categories />
             <BestSeller />
+            <FeaturedBrands />
             <NewArrivals />
             <SecondaryBanner />
             <NewsLetter />
