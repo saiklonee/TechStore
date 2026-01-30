@@ -3,7 +3,10 @@ import ProductCard from "./ProductCard";
 
 const NewArrivals = () => {
     const { products } = useAppContext();
-    const newArrivals = products.filter((product) => product.inStock).slice(0, 2);
+    const newArrivals = [...products]
+        .filter((product) => product.inStock)
+        .slice(-3)
+        .reverse();
 
     return (
         <section className="mt-24 px-4 md:px-8">

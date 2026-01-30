@@ -5,7 +5,7 @@ import { useAppContext } from "../context/AppContext";
 const BestSeller = () => {
   const { products } = useAppContext();
 
-  const bestSellers = products.filter((product) => product.inStock).slice(0, 5);
+  const bestSellers = products.filter((product) => product.inStock).slice(0, 10);
 
   return (
     <section className="mt-24 px-4 md:px-8">
