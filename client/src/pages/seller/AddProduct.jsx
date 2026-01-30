@@ -2,11 +2,11 @@ import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { assets, categories } from "../../assets/assets";
 import toast from "react-hot-toast";
 import { useAppContext } from "../../context/AppContext";
+import Spinner from "../../components/common/Spinner";
 
 const MAX_IMAGES = 4;
 
 const AddProduct = () => {
-    // Keep fixed length array for predictable UI (4 slots)
     const [files, setFiles] = useState(() => Array(MAX_IMAGES).fill(null));
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
@@ -16,16 +16,12 @@ const AddProduct = () => {
     const [loading, setLoading] = useState(false);
 
     const { axios } = useAppContext();
-
-    // file input refs so we can clear the input value when removing
     const inputRefs = useRef([]);
 
-    // Create preview URLs only when files change (optimized)
     const previews = useMemo(() => {
         return files.map((file) => (file ? URL.createObjectURL(file) : null));
     }, [files]);
 
-    // Cleanup preview URLs (important to prevent memory leaks)
     useEffect(() => {
         return () => {
             previews.forEach((url) => {
@@ -47,7 +43,6 @@ const AddProduct = () => {
             const file = e.target.files?.[0];
             if (!file) return;
 
-            // Basic guard: accept images only (extra safety)
             if (!file.type?.startsWith("image/")) {
                 toast.error("Please select an image file");
                 e.target.value = "";
@@ -55,7 +50,6 @@ const AddProduct = () => {
             }
 
             setFileAtIndex(index, file);
-            // allow selecting the same file again later
             e.target.value = "";
         },
         [setFileAtIndex]
@@ -67,7 +61,6 @@ const AddProduct = () => {
 
             setFileAtIndex(index, null);
 
-            // also clear input element (if any)
             const input = inputRefs.current[index];
             if (input) input.value = "";
         },
@@ -81,7 +74,6 @@ const AddProduct = () => {
         const numericPrice = Number(price);
         const numericOfferPrice = Number(offerPrice);
 
-        // validations
         const selectedFiles = files.filter(Boolean);
         if (selectedFiles.length === 0) {
             toast.error("Please add at least one product image");
@@ -131,7 +123,6 @@ const AddProduct = () => {
             if (data?.success) {
                 toast.success(data.message || "Product added");
 
-                // reset form
                 setName("");
                 setDescription("");
                 setCategory("");
@@ -139,7 +130,6 @@ const AddProduct = () => {
                 setOfferPrice("");
                 setFiles(Array(MAX_IMAGES).fill(null));
 
-                // clear file inputs
                 inputRefs.current.forEach((input) => {
                     if (input) input.value = "";
                 });
@@ -195,7 +185,6 @@ const AddProduct = () => {
                                         />
                                     </label>
 
-                                    {/* Remove button */}
                                     {hasImage && (
                                         <button
                                             type="button"
@@ -298,12 +287,19 @@ const AddProduct = () => {
                 {/* Button */}
                 <button
                     disabled={loading}
-                    className={`px-8 py-2.5 rounded text-white font-medium transition ${loading
-                            ? "bg-gray-400 cursor-not-allowed"
-                            : "bg-primary hover:bg-primary-dull"
+                    className={`px-8 py-2.5 rounded text-white font-medium transition inline-flex items-center justify-center gap-2 ${loading
+                        ? "bg-gray-400 cursor-not-allowed"
+                        : "bg-primary hover:bg-primary-dull"
                         }`}
                 >
-                    {loading ? "Uploading..." : "ADD PRODUCT"}
+                    {loading ? (
+                        <>
+                            <Spinner size={18} />
+                            Uploading...
+                        </>
+                    ) : (
+                        "ADD PRODUCT"
+                    )}
                 </button>
             </form>
         </div>
