@@ -78,7 +78,7 @@ const ProductCard = ({
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => addToCart(product._id)}
-                className="px-2.5 py-1.5 bg-primary hover:bg-blue-700 text-white text-[13px] rounded-sm shadow-sm"
+                className="px-2.5 py-1.5 bg-primary hover:bg-blue-700 text-white text-[13px] rounded-sm shadow-sm cursor-pointer"
               >
                 Add to Cart
               </motion.button>
@@ -86,7 +86,7 @@ const ProductCard = ({
               <div className="flex items-center gap-2.5 bg-gray-300 px-2.5 py-1 rounded-sm">
                 <button
                   onClick={() => removeFromCart(product._id)}
-                  className="text-gray-600 hover:text-gray-900 text-[15px] w-5"
+                  className="text-gray-600 hover:text-gray-900 text-[15px] w-5 cursor-pointer"
                 >
                   -
                 </button>
@@ -95,7 +95,7 @@ const ProductCard = ({
                 </span>
                 <button
                   onClick={() => addToCart(product._id)}
-                  className="text-gray-600 hover:text-gray-900 text-[15px] w-5"
+                  className="text-gray-600 hover:text-gray-900 text-[15px] w-5 cursor-pointer transition-all"
                 >
                   +
                 </button>
